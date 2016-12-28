@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GreenPipes;
 using MassTransit.Logging;
-using MassTransit.Pipeline;
 using MassTransit.Saga;
 using MassTransit.Util;
 using Raven.Client;
