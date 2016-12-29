@@ -9,7 +9,7 @@ NUGET
       Newtonsoft.Json (>= 9.0.1)
     NewId (3.0)
     Newtonsoft.Json (9.0.1)
-    NUnit (3.2.1)
+    NUnit (3.5)
     NUnit.ConsoleRunner (3.2.1)
     NUnit.Extension.NUnitProjectLoader (3.2.1)
     NUnit.Extension.NUnitV2Driver (3.2.1)
