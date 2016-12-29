@@ -10,6 +10,9 @@
 // under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the 
 // specific language governing permissions and limitations under the License.
+
+using GreenPipes;
+
 namespace MassTransit.TestFramework
 {
     using System;
@@ -149,8 +152,8 @@ namespace MassTransit.TestFramework
 
         protected void LogEndpoint(IReceiveEndpointConfigurator configurator)
         {
-            configurator.UseLog(Console.Out, (context,logContext) =>
-                Task.FromResult($"Received (input_queue): {context.ReceiveContext.TransportHeaders.Get("MessageId", "N/A")}, Types = ({string.Join(",", context.SupportedMessageTypes)})"));
+            configurator.UseLog(Console.Out, (context) =>
+                Task.FromResult($"Received (input_queue): {context.Context.ReceiveContext.TransportHeaders.Get("MessageId", "N/A")}, Types = ({string.Join(",", context.Context.SupportedMessageTypes)})"));
         }
     }
 }
